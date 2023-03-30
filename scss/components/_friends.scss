@@ -1,0 +1,96 @@
+.friends {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.friends__wrapper {
+  position: relative;
+}
+
+.friends__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.friends__list {
+  list-style-type: none;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 990px;
+}
+
+.friends__item {
+  background-color: $friends-card-bg-color;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.friends__item:hover {
+  background-color: $light-bg-color;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.friends__image {
+  display: block;
+  border-radius: 9px 9px 0px 0px;
+  margin-bottom: 29px;
+}
+
+.friends__subtitle {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.friends__card-button {
+  width: 187px;
+  margin: 0 auto;
+}
+
+.friends__slider-button {
+  position: absolute;
+  bottom: 303px;
+  padding-top: 11px;
+  padding-bottom: 15px;
+}
+
+.friends__slider-button-left {
+  left: 0;
+}
+
+.friends__slider-button-right {
+  transition: transform 0s, background-color 1s;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.friends__button {
+  text-decoration: none;
+  text-align: center;
+  width: 261px;
+  margin: 0 auto;
+  background-color: $accent-color;
+}
+
+.friends--inner .friends__list {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px 40px;
+  width: 100%;
+}
+
+.friends__pagination-list {
+  margin: 0 auto;
+}

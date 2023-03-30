@@ -1,0 +1,57 @@
+.header {
+  width: 1200px;
+  max-width: 1200px;
+  min-height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.header__logo-link:hover {
+  opacity: 0.7;
+}
+
+.header__logo-big-text {
+  color: $accent-color;
+  font-family: "Georgia", serif;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.header__logo-small-text {
+  color: $bright-light-color;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0;
+}
+
+.header__navigation {
+  margin-right: 2px;
+  padding-bottom: 5px;
+}
+
+.header--inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header--inner .header__logo-big-text {
+  color: $main-color;
+}
+
+.header--inner .header__logo-small-text {
+  color: $button-text-color;
+}

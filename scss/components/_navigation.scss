@@ -1,0 +1,44 @@
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.navigation__link {
+  color: $light-color;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .7s;
+}
+
+.navigation__link:hover {
+  color: $friends-card-bg-color;
+}
+
+.navigation__link:active,
+.navigation__link--active {
+  color: $friends-card-bg-color;
+  text-decoration: underline;
+  text-decoration-color: $accent-color;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  pointer-events: none;
+}
+
+.navigation--inner .navigation__link {
+  color: $main-color;
+}
+
+.navigation--inner .navigation__link:hover {
+  opacity: 0.7;
+}
+
+.navigation--inner .navigation__link--active,
+.navigation--inner .navigation__link--active:hover {
+  color: $button-text-color;
+  opacity: 1;
+}
