@@ -1,5 +1,13 @@
 .description {
   min-height: 800px;
+
+  @media (max-width: $desktop) {
+    min-height: 1050px;
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 670px;
+  }
 }
 
 .description__wrapper {
@@ -9,6 +17,25 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: bottom right;
+
+  @media (max-width: $desktop) {
+    padding-top: 60px;
+    padding-bottom: 692px;
+    background-size: 60%;
+  }
+
+  @media (max-width: 915px) {
+    background-size: 80%;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 378px;
+    background-size: 50%;
+  }
+
+  @media (max-width: 425px) {
+    background-size: 87%;
+  }
 }
 
 .description__title {
@@ -18,12 +45,34 @@
   font-family: "Georgia", serif;
   font-size: 44px;
   line-height: 130%;
+
+  @media (max-width: $desktop) {
+    padding-left: 124px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 .description__subtitle {
   margin: 0;
   margin-bottom: 42px;
   width: 460px;
+
+  @media (max-width: $desktop) {
+    margin: 0 auto;
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 }
 
 .description__button {
@@ -31,4 +80,8 @@
   text-align: center;
   width: 207px;
   background-color: $accent-color;
+
+  @media (max-width: $desktop) {
+    margin: 0 auto;
+  }
 }

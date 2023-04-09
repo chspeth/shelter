@@ -1,4 +1,13 @@
 .wrapper {
-  width: 1200px;
+  width: $desktop-wrap;
+  max-width: 1280px;
   margin: 0 auto;
+
+  @media (max-width: $desktop) {
+    width: $tablet-wrap;
+  }
+
+  @media (max-width: $tablet) {
+    width: $mobile-wrap;
+  }
 }

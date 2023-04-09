@@ -6,13 +6,19 @@
   flex-direction: row;
   width: 340px;
   gap: 20px;
+
+  @media (max-width: $tablet) {
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .pagination__link {
   text-decoration: none;
   text-align: center;
-}
 
-.pagination__link--current {
-  background-color: $accent-color;
+  &--current {
+    background-color: $accent-color;
+  }
 }

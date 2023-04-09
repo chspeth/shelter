@@ -13,22 +13,23 @@
   padding-bottom: 13px;
   cursor: pointer;
   transition: all 1s;
-}
 
-.button:hover {
-  border-color: $accent-hover-color;
-  background-color: $accent-hover-color;
-}
+  &:hover {
+    border-color: $accent-hover-color;
+    background-color: $accent-hover-color;
+  }
 
-.button:disabled,
-.button--disabled,
-.button--disabled:hover {
-  color: $disabled-color;
-  border-color: $disabled-color;
-  background-color: transparent;
-}
+  &:disabled,
+  &--disabled,
+  &--disabled:hover {
+    color: $disabled-color;
+    border-color: $disabled-color;
+    background-color: transparent;
+    pointer-events: none;
+  }
 
-.button:disabled svg,
-.button--disabled svg {
-  fill: $disabled-color;
+  &:disabled svg,
+  &--disabled svg {
+    fill: $disabled-color;
+  }
 }

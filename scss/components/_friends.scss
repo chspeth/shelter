@@ -1,6 +1,11 @@
 .friends {
   padding-top: 80px;
   padding-bottom: 100px;
+
+  @media (max-width: $tablet) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
 }
 
 .friends__wrapper {
@@ -10,6 +15,10 @@
 .friends__title {
   text-align: center;
   margin-bottom: 60px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 42px;
+  }
 }
 
 .friends__list {
@@ -21,7 +30,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 990px;
+  width: 82.5%;
+
+  @media (max-width: $desktop) {
+    width: 81.92%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+    margin-bottom: 113px;
+    justify-content: center;
+  }
 }
 
 .friends__item {
@@ -30,11 +49,23 @@
   padding-bottom: 30px;
   transition: all 0.5s;
   cursor: pointer;
-}
 
-.friends__item:hover {
-  background-color: $light-bg-color;
-  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  &:hover {
+    background-color: $light-bg-color;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+
+  @media (max-width: $desktop) {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 }
 
 .friends__image {
@@ -64,16 +95,28 @@
   bottom: 303px;
   padding-top: 11px;
   padding-bottom: 15px;
+  transition: transform 0s, background-color 1s;
+
+  @media (max-width: $tablet) {
+    bottom: 95px;
+  }
 }
 
 .friends__slider-button-left {
   left: 0;
+
+  @media (max-width: $tablet) {
+    left: 58px;
+  }
 }
 
 .friends__slider-button-right {
-  transition: transform 0s, background-color 1s;
   right: 0;
   transform: rotate(180deg);
+
+  @media (max-width: $tablet) {
+    right: 58px;
+  }
 }
 
 .friends__button {
@@ -84,13 +127,55 @@
   background-color: $accent-color;
 }
 
-.friends--inner .friends__list {
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 30px 40px;
-  width: 100%;
-}
-
 .friends__pagination-list {
   margin: 0 auto;
+}
+
+.friends--inner {
+  .friends__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 40px;
+    width: 100%;
+
+    @media (max-width: $desktop) {
+      margin-bottom: 41px;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    padding-bottom: 76px;
+
+    .friends__title {
+      margin-bottom: 30px;
+    }
+
+    .friends__item:nth-last-child(2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 45px;
+
+    .friends__item {
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+
+    .friends__title {
+      margin-bottom: 42px;
+    }
+  }
+
+  @media (max-width: 630px) {
+    .friends__item {
+      &:nth-last-child(3),
+      &:nth-last-child(4),
+      &:nth-last-child(5) {
+        display: none;
+      }
+    }
+  }
 }
